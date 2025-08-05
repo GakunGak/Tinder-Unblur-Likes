@@ -14,9 +14,7 @@ async function unblur() {
 
   teasers.forEach((teaser, index) => {
     const teaserEl = teaserEls[index];
-    const teaserImage = `https://preview.gotinder.com/${teaser.user._id}/original_${teaser.user.photos[0].id}.jpeg`;
+    const teaserImage = teaser.user.photos[0].url;
     teaserEl.style.backgroundImage = `url(${teaserImage})`;
   });
 }
-
-unblur();
